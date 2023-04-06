@@ -130,12 +130,16 @@
     <ClCompile Include="Birthday.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventCrudCpp.cpp" />
+    <ClCompile Include="EventStore.cpp" />
     <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="Remind.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Birthday.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="EventStore.h" />
     <ClInclude Include="Functions.h" />
+    <ClInclude Include="Remind.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

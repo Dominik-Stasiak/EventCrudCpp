@@ -12,7 +12,7 @@ protected:
 public:
 	Event(std::string date, std::string text);
 
-	virtual void print() const;
+	virtual void print() const = 0;
 
 	std::string getDate() { return e_date; }
 	std::string getText() { return e_text; }

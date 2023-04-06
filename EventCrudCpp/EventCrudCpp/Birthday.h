@@ -5,6 +5,7 @@
 
 class Birthday : public Event
 {
+
 public:
 	Birthday(std::string date, std::string text, int e_yearOfBirth);
 	void print() const override;
