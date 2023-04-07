@@ -13,13 +13,17 @@ void createEvent() {
     system("cls");
     if (c == 1) {
         std::cout << "\nRemind selected :" << std::endl;
-        Remind* e = new Remind();
-        e->newEvent();
+        
+        Remind* r = new Remind();
+        addToEvents(r->newEvent());
+        delete r;
     }
     else if (c == 2) {
         std::cout << "\nBirthday selected :" << std::endl;
-        Birthday* e = new Birthday();
-        e->newEvent();
+
+        Birthday* b = new Birthday();
+        addToEvents(b->newEvent());
+        delete b;
     }
     else {
         std::cout << "\nInvalid option selected." << std::endl;
@@ -31,7 +35,7 @@ void showEvent() {
 }
 
 void showAllEvents() {
-
+    printEvents();
 }
 
 void deleteEvent() {

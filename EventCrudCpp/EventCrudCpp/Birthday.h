@@ -16,8 +16,6 @@ public:
 
 private:
 	int e_yearOfBirth;
-	int e_age;
-
 };
 
 #endif

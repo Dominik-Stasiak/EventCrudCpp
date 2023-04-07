@@ -16,8 +16,8 @@ public:
 	Event(std::string date, std::string text);
 	virtual ~Event() {}
 
-	virtual void print() const = 0;
-	virtual Event* newEvent() = 0;
+	virtual void print() const;
+	virtual Event* newEvent();
 
 	std::string getDate() { return e_date; }
 	std::string getText() { return e_text; }

@@ -1,11 +1,10 @@
 #include "Birthday.h"
 #include "Functions.h"
 
-Birthday::Birthday() {
-	
+Birthday::Birthday() : e_yearOfBirth(0) {
 }
 
-Birthday::Birthday(std::string date, std::string text, int yearOfBirth) 
+Birthday::Birthday(std::string date, std::string text, int yearOfBirth = 0) 
 	: Event(date, text), e_yearOfBirth(yearOfBirth)
 {
 }
@@ -17,17 +16,17 @@ void Birthday::print() const {
 }
 
 Event* Birthday::newEvent() {
-	std::string date;
-	std::string text;
+	std::string date, text;
 	int year;
 
-	std::cout << "Date: ";
+	std::cout << "\nDate: ";
 	std::cin >> date;
 
-	std::cout << "\nText: ";
-	std::cin >> text;
+	std::cout << "Text: ";
+	std::cin.ignore();
+	std::getline(std::cin, text);
 
-	std::cout << "\nYear of birth: ";
+	std::cout << "Year of birth: ";
 	std::cin >> year;
 
 	return new Birthday(date, text, year);

@@ -25,9 +25,11 @@ int main()
             break;
         case 2:
             std::cout << "2. Show event" << std::endl;
+            //printEvent();
             break;
         case 3:
             std::cout << "3. Show all events" << std::endl;
+            printEvents();
             break;
         case 4:
             std::cout << "4. Delete event" << std::endl;

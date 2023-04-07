@@ -19,11 +19,11 @@ void Remind::print() const {
 Event* Remind::newEvent() {
 	std::string date, text;
 
-	std::cout << "Date: ";
+	std::cout << "\nDate: ";
 	std::cin >> date;
 
-	std::cout << "\nName: ";
-	std::cin >> text;
+	std::cout << "Text: ";
+	std::getline(std::cin, text);
 
 	return new Remind(date, text);
 }
