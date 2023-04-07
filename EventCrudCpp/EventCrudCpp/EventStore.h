@@ -2,7 +2,6 @@
 #define EVENTSTORE_H
 
 #include "Event.h"
-#include <iostream>
 #include <vector>
 
 

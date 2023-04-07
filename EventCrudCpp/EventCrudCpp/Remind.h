@@ -7,8 +7,12 @@ class Remind : public Event
 {
 
 public:
+	Remind();
 	Remind(std::string date, std::string text);
+
 	void print() const override;
+
+	Event* newEvent() override;
 };
 
 #endif
