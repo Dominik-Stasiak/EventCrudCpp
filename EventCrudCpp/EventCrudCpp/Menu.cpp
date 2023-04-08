@@ -24,10 +24,13 @@ void createEvent() {
         Birthday* b = new Birthday();
         addToEvents(b->newEvent());
         delete b;
+
     }
     else {
         std::cout << "\nInvalid option selected." << std::endl;
     }
+
+    saveToFile();
 }
 
 void showEvent() {
@@ -39,9 +42,14 @@ void showAllEvents() {
 }
 
 void deleteEvent() {
-
+    int n;
+    printEvents();
+    std::cout << "Select event to remove: " << std::endl;
+    std::cout << " -> ";
+    std::cin >> n;
+    deleteSelected(n);
 }
 
 void deleteAllEvents() {
-
+    deleteAll();
 }

@@ -1,5 +1,3 @@
-#include <iostream>
-#include <regex>
 #include "Functions.h"
 
 int getYearFromString(const std::string& date) {
@@ -18,3 +16,29 @@ int getYearFromString(const std::string& date) {
 		return -1;
 	}
 }
+
+int getYearOfBirth(const std::string& str) {
+	std::string prefix = "Year of birth: ";
+	auto pos = str.find(prefix);
+	if (pos == std::string::npos) {
+		return -1;
+	}
+	int year = std::stoi(str.substr(pos + prefix.length()));
+	return year;
+}
+
+std::string getDate(const std::string& str) {
+	std::string prefix = "Date: ";
+	auto pos = str.find(prefix);
+	
+	std::string date = str.substr(pos + prefix.length());
+	return date;
+}
+std::string getText(const std::string& str) {
+	std::string prefix = "Text: ";
+	auto pos = str.find(prefix);
+
+	std::string text = str.substr(pos + prefix.length());
+	return text;
+}
+

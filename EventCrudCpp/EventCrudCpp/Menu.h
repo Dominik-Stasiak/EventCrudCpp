@@ -5,6 +5,7 @@
 #include "Birthday.h"
 #include "Remind.h"
 #include "EventStore.h"
+#include "Functions.h"
 
 void createEvent();
 void showEvent();

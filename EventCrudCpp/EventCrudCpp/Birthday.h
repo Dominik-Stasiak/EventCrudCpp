@@ -11,7 +11,7 @@ public:
 	Birthday(std::string date, std::string text, int e_yearOfBirth);
 
 	void print() const override;
-
+	std::string toString() const override;
 	Event* newEvent() override;
 
 private:

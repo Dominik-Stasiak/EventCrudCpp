@@ -11,7 +11,7 @@ public:
 	Remind(std::string date, std::string text);
 
 	void print() const override;
-
+	std::string toString() const override;
 	Event* newEvent() override;
 };
 
