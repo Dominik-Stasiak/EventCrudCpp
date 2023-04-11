@@ -8,8 +8,8 @@
 #include "Functions.h"
 
 void createEvent();
-void showEvent();
 void showAllEvents();
+void updateEvent();
 void deleteEvent();
 void deleteAllEvents();
 

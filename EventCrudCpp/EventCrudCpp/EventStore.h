@@ -10,6 +10,7 @@
 void addToEvents(Event* e);
 void printEvents();
 void saveToFile();
+void updateSelected(int n);
 void deleteSelected(int n);
 void deleteAll();
 

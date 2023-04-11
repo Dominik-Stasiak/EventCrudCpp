@@ -53,7 +53,7 @@ void printEvents() {
 }
 
 void saveToFile() {
-	std::ofstream outFile(fileName);
+	std::ofstream outFile(fileName, std::ios_base::app);
 
 	if (outFile.is_open()) {
 		for (const Event* event : events) {
@@ -65,6 +65,40 @@ void saveToFile() {
 		std::cerr << "Unable to open txt file" << fileName << std::endl;
 	}
 	events.clear();
+}
+
+void updateSelected(int n) {
+	n -= 1;
+	if (n >= 0 && n < events.size()) {
+		std::cout << "\nSelect type of event :" << std::endl;
+		std::cout << "\n1. Remind" << std::endl;
+		std::cout << "2. Birthday" << std::endl;
+		std::cout << " -> ";
+		short c;
+		std::cin >> c;
+
+		system("cls");
+		std::cout << "Old one:\n\n";
+		events.at(n)->print();
+		
+		if (c == 1) {
+			std::cout << "\nNew remind:\n";
+			Remind* r = new Remind();
+			events.at(n) = r->newEvent();
+			delete r;
+		}
+		else if (c == 2) {
+			std::cout << "\nNew birthday:\n";
+			Birthday* b = new Birthday();
+			events.at(n) = b->newEvent();
+			delete b;
+
+		}
+	}
+	else {
+		std::cout << "Invalid number!" << std::endl;
+	}
+	saveToFile();
 }
 
 void deleteSelected(int n) {
@@ -85,4 +119,6 @@ void deleteAll() {
 		outFile << "";
 		outFile.close();
 	}
+
+	events.clear();
 }

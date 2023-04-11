@@ -33,15 +33,19 @@ void createEvent() {
     saveToFile();
 }
 
-void showEvent() {
-
-}
-
 void showAllEvents() {
     printEvents();
 }
 
-void deleteEvent() {
+void updateEvent() {
+    int n;
+    printEvents();
+    std::cout << "Select event to remove: " << std::endl;
+    std::cout << " -> ";
+    std::cin >> n;
+    updateSelected(n);
+
+}void deleteEvent() {
     int n;
     printEvents();
     std::cout << "Select event to remove: " << std::endl;
@@ -51,5 +55,6 @@ void deleteEvent() {
 }
 
 void deleteAllEvents() {
+    std::cout << "Deleting..." << std::endl;
     deleteAll();
 }

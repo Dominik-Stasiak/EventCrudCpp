@@ -1,0 +1,9 @@
+Type: Birthday
+Date: 11.05.2023
+Text: My birthday
+Year of birth: 1998
+
+Type: Remind
+Date: 24.04.2023
+Text: Training
+
